@@ -1,34 +1,51 @@
 ---
 title: "Reproducción de un Artículo"
-author: ""
+author: "M. Solano"
 date: "5/11/2020"
-output: html_document
+output:
+  prettydoc::html_pretty:
+    theme: leonids
+    highlight: github
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+Curso: Herramientas prácticas para investigación reproducible
 
+Estudiante: Minor Solano Gutiérrez
 
-![](C:/Users/Usuario/Desktop/2020 - II/Cursos/Metodos para investigacion reproducible/Reproduccion/Captura4.png)
-
-
-![](C:/Users/Usuario/Desktop/2020 - II/Cursos/Metodos para investigacion reproducible/Reproduccion/Captura.png)
-
-![](C:/Users/Usuario/Desktop/2020 - II/Cursos/Metodos para investigacion reproducible/Reproduccion/Captura2.png)
+Profesores: Beatriz Willink, Marcelo Araya
 
 
 
+# Artículo reproducido
 
-![](C:/Users/Usuario/Desktop/2020 - II/Cursos/Metodos para investigacion reproducible/Reproduccion/Captura3.png)
+A novel statistical method for classifyin habitat generalists and specialists
+
+Autores: Robin L. Chazdon, Anne Robert K. Colwell, Shag-Yi Lin, Natalia Norden, Susan G. Letcher, David B. Clarck, Bryan Finegan & J. Pablo Arroyo
+
+Revista: Ecology, 92(6): 1332-1343.2011
 
 
 
-```{r cars}
+## Trata de...
+Este artículo propone un modelo llamado Multinomial Species Classification Method (CLAM) y básicamente el enfoque estadístico es clasificar especies generalistas y especialistas en dos hábitats distintos. El método utiliza un modelo multinomail basado en la abundancia relativa de especies utilizando un umbral (k) de supermayoría (k = 2/3) y un umbral de mayoria simple (K = 1/2).
 
-```
 
-## Código de reproducción
+## ¿Qué se reprodujo? ¿Por qué?
+
+Se reprodujo el resultado de la clasificación de las especies en la muestra completa para el conjunto de datos de árboles en dos hábitats en el bosque la selva 
+
+1- Second growth
+
+2- Old growth
+
+Este es análisis que me interesa aplicar en mi investigación de tesis y además me parace muy interesante y aplicable.
+
+
+
+# Código de reproducción
 
 
 ```{r, fig.align='center'}
@@ -109,7 +126,7 @@ porc.sp
 
 ```
 
-![](C:/Users/Usuario/Desktop/2020 - II/Cursos/Metodos para investigacion reproducible/Reproduccion/Captura7.png)
+**Figuras**
 
 ```{r}
 
@@ -176,8 +193,46 @@ axis(1, at = c(1, 4, 7), labels = c("Generalist", "Old-growth specialist", "Seco
 
 ![](C:/Users/Usuario/Desktop/2020 - II/Cursos/Metodos para investigacion reproducible/Reproduccion/Captura9.png)
 ```{r}
+
 porc.sp
 
 ```
+## ¿Reproducible?
 
-![](C:/Users/Usuario/Desktop/2020 - II/Cursos/Metodos para investigacion reproducible/Reproduccion/Captura8.png)
+**Materiales suplementarios**
+
+El artículos no incluye el código en los materiales complementarios
+
+En los materiales suplementarios incluyen los datos
+
+
+**Métodos**
+
+En los métodos y en general en el artículo incluyen los parámetros del análisis y detallan toda la matemática del análisis, eso facilita la reproducción
+
+
+**Características que dificultaron la reproducción **
+
+Incluir el código en los materiales suplementarios hubiese facilitado mucho la reproducción
+
+
+**Caracteristicas del artículo que facilitaron la reproducción**
+
+El artículo discute el modelo y lo explica a detalle, además incluyen todos los datos y también los resultados de las clasificaciones
+
+
+**Extra**
+
+Peter Solymos elaboró una función del modelo en R, en el paquete vegan, esto facilitó la reproducción
+
+
+**En general el artículo sí es reproducible, algunas diferencias minímas, pero pueden ser un error al reproducir, ya que no proporcionaron el código**
+
+
+**GRACIAS**
+
+
+*Información de la sesión*
+
+```{r, echo=FALSE}
+sessionInfo()
